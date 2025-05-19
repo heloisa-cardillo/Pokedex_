@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             loadPokemon()
     }
     private fun loadPokemon() {
-       PokemonRepository.listPokemons(limit=2, object:
+       PokemonRepository.listPokemons(limit=1, object:
            PokemonRepository.ListPokemonResultsListener{
            override fun onPokemonListRetrieved(value: PokemonsApiResult?) {
                value?.results?.forEachIndexed { index, pokemonResult ->
